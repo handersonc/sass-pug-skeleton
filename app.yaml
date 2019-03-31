@@ -1,0 +1,30 @@
+# [START runtime]
+runtime: python27
+threadsafe: yes
+# [END runtime]
+
+handlers:
+
+- url: /assets/(.*\.*)
+  static_files: src/assets/\1
+  upload: src/assets/(.*\.*)
+
+- url: /css/(.*\.css)
+  static_files: src/css/\1
+  upload: src/css/(.*\.css)
+
+- url: /js/(.*\.js)
+  static_files: src/js/\1
+  upload: src/js/(.*\.js)
+
+- url: /public_html/(.*\.html)
+  static_files: src/public_html/\1
+  upload: src/public_html/(.*\.*)
+
+- url: .*
+  static_files: src/index.html
+  upload: src/index.html
+
+# Temporary setting to keep gcloud from uploading not required files for deployment
+skip_files:
+- ^node_modules$

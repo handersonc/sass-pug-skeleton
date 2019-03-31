@@ -1,0 +1,19 @@
+
+/* laureate main theme */
+$orange: #DF4722 !default;
+
+$colors: map-merge(
+    (
+        "orange": $orange
+    ), 
+    $colors
+);
+
+$laureate: $orange !default;
+
+$theme-colors: map-merge(
+    (
+        "orange": $orange
+    ),
+    $theme-colors
+);

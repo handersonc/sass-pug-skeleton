@@ -1,0 +1,8 @@
+/node_modules/
+
+/src/dist/css/
+/src/dist/html/
+/src/dist/js/
+
+.sass-cache/
+*.css.map
